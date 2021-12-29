@@ -14,8 +14,6 @@ import { MoviesInYearComponent } from './Pages/years/movies-in-year/movies-in-ye
 import { AddMovieComponent } from './Pages/add-movie/add-movie.component';
 import {FormsModule} from "@angular/forms";
 import { SearchFieldComponent } from './Pages/search-field/search-field.component';
-
-import { ShowSearchResultsComponent } from './Pages/search-field/show-search-results/show-search-results.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
 
 
@@ -33,7 +31,6 @@ import { CheckBoxComponent } from './check-box/check-box.component';
     MoviesInYearComponent,
     AddMovieComponent,
     SearchFieldComponent,
-    ShowSearchResultsComponent,
     CheckBoxComponent
 
   ],

@@ -8,7 +8,7 @@ import {MoviesInCategoryComponent} from "./Pages/categories/movies-in-category/m
 import {YearsComponent} from "./Pages/years/years.component";
 import {MoviesInYearComponent} from "./Pages/years/movies-in-year/movies-in-year.component";
 import {AddMovieComponent} from "./Pages/add-movie/add-movie.component";
-import {ShowSearchResultsComponent} from "./Pages/search-field/show-search-results/show-search-results.component";
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/movies/:title', pathMatch: 'full' },
@@ -21,7 +21,6 @@ const routes: Routes = [
   {path: 'years/:year', component: MoviesInYearComponent},
   {path: 'add-movie', component: AddMovieComponent},
   {path: 'search-bar-results', component: MoviesComponent},
-  {path: 'search-bar-results/:title', component: ShowSearchResultsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
