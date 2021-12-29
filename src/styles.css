@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+  background-color: lightblue;
+}
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.active
+{
+  color: red;
+}
+.hidden
+{
+  display: none;
+}
