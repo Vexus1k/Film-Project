@@ -11,8 +11,9 @@ import {AddMovieComponent} from "./Pages/add-movie/add-movie.component";
 import {ShowSearchResultsComponent} from "./Pages/search-field/show-search-results/show-search-results.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/movies', pathMatch: 'full' },
+  {path: '', redirectTo: '/movies/:title', pathMatch: 'full' },
   {path: 'movies', component: MoviesComponent},
+  {path: 'movies/:title', component: MoviesComponent},
   {path: 'movie/:id', component: MovieDetailsComponent,},
   {path: 'categories', component: CategoriesComponent},
   {path: 'categories/:category', component: MoviesInCategoryComponent},

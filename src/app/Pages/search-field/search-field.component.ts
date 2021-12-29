@@ -23,7 +23,7 @@ export class SearchFieldComponent implements OnInit {
   }
   go_next(){
     setTimeout(() => {
-        this.router.navigate(['/search-bar-results/' + this.title])
+        this.router.navigate(['/movies/' + this.title])
       }
       , 2000);
   }

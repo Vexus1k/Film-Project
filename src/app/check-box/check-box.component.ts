@@ -16,6 +16,6 @@ export class CheckBoxComponent {
   constructor(private http: HttpService) { }
 
   sendValueFromTitleToService(){
-    this.http.changeMessage(this.checked)
+    this.http.changeTerm(this.checked)
   }
 }

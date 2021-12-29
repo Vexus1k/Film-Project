@@ -16,8 +16,8 @@ export class HttpService {
 
   private messageSource = new BehaviorSubject<boolean>(false);
   currentMessage = this.messageSource.asObservable();
-  changeMessage(message: boolean) {
-    this.messageSource.next(message)
+  changeTerm(term: boolean) {
+    this.messageSource.next(term)
   }
 
   postMovie(movie: Movie): Observable<Movie>{
@@ -37,7 +37,7 @@ export class HttpService {
   }
   getMovieFromTitle(title: string): Observable<Movie[]>{
     return this.getMovies().pipe(
-      tap(movies => {const searcher = new FuzzySearch(movies, ['title', 'plot'], {
+      map(movies => {const searcher = new FuzzySearch(movies, ['title', 'plot'], {
       caseSensitive: true,
     });
         console.log(title)
