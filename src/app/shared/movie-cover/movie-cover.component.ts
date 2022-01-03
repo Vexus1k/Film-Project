@@ -10,15 +10,27 @@ import {HttpService} from "../../services/http.service";
 export class MovieCoverComponent implements OnInit{
   @Input() movie: Movie;
   titleShow: boolean;
+  plotShow: boolean;
+  imageShow: boolean;
+
   constructor(private http: HttpService) {
   }
   ngOnInit() {
-    this.http.currentMessage.subscribe(result => this.titleShow = result)
+    this.http.termResultForTitle.subscribe(result => this.titleShow = result);
+    this.http.termResultForPlot.subscribe(result => this.plotShow = result);
+    this.http.termResultForImage.subscribe(result => this.imageShow = result);
   }
   show(){
     console.log(this.titleShow)
   }
-
+  setImageStyle(){
+    if(this.imageShow == true)
+    {
+      return{
+        visibility: `hidden`
+      };
+    }
+  }
 
 
 }

@@ -21,11 +21,11 @@ export class SearchFieldComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  go_next(){
+  searchResult(){
     setTimeout(() => {
         this.router.navigate(['/movies/' + this.title])
       }
-      , 2000);
+      , 1000);
   }
 
 

@@ -13,20 +13,34 @@ export class HttpService {
   private url = 'http://localhost:3000/movies/';
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
 
+  //checkbox title
+  private termForTitle = new BehaviorSubject<boolean>(false);
+  termResultForTitle = this.termForTitle.asObservable();
+  changeTermForTitle(term: boolean) {
+    this.termForTitle.next(term)
+  }
 
-  private messageSource = new BehaviorSubject<boolean>(false);
-  currentMessage = this.messageSource.asObservable();
-  changeTerm(term: boolean) {
-    this.messageSource.next(term)
+  //checkbox plot
+  private termForPlot = new BehaviorSubject<boolean>(false);
+  termResultForPlot = this.termForPlot.asObservable();
+  changeTermForPlot(term: boolean) {
+    this.termForPlot.next(term)
+  }
+
+  //checkbox image
+  private termForImage = new BehaviorSubject<boolean>(false);
+  termResultForImage = this.termForImage.asObservable();
+  changeTermForImage(term: boolean) {
+    this.termForImage.next(term)
   }
 
   postMovie(movie: Movie): Observable<Movie>{
     return this.httpClient.post<Movie>(this.url, movie).pipe(tap(console.log));
   }
 
-  deleteMovie(id: string){
-    return this.httpClient.delete(this.url + id).pipe(tap(console.log))
-  }
+  // deleteMovie(id: string){
+  //   return this.httpClient.delete(this.url + id).pipe(tap(console.log))
+  // }
 
   getMovies(): Observable<Movie[]>{
     return this.httpClient.get<Movie[]>('http://localhost:3000/movies/');

@@ -1,7 +1,9 @@
-.grid{
-  margin-right: 100px;
-
-}
 label{
   color: black;
 }
+li
+{
+  margin: 0 15px;
+}
+
+

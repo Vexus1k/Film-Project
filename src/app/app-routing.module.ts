@@ -11,7 +11,7 @@ import {AddMovieComponent} from "./Pages/add-movie/add-movie.component";
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/movies/:title', pathMatch: 'full' },
+  {path: '', redirectTo: 'movies', pathMatch: 'full' },
   {path: 'movies', component: MoviesComponent},
   {path: 'movies/:title', component: MoviesComponent},
   {path: 'movie/:id', component: MovieDetailsComponent,},

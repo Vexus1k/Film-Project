@@ -2,12 +2,14 @@
   <div class="nav-wrapper blue">
     <a id="logo" class="brand-logo" routerLink="/">Best Movies</a>
     <ul class="right hide-on-med-and-down">
-      <app-check-box></app-check-box>
-      <app-search-field></app-search-field>
       <li><a routerLink="/movies" routerLinkActive="active">Movies</a></li>
       <li><a routerLink="/categories" routerLinkActive="active">Categories</a></li>
       <li><a routerLink="/years" routerLinkActive="active">Years</a></li>
       <li><a routerLink="/add-movie" routerLinkActive="active">Add Movie</a> </li>
+    </ul>
+    <ul class="checkboxes right hide-on-med-and-down">
+      <li><app-check-box></app-check-box></li>
+      <li><app-search-field></app-search-field></li>
     </ul>
   </div>
 </nav>

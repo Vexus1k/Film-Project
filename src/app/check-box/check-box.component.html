@@ -1,9 +1,21 @@
 <li>
-  <div class="grid">
   <label>
-  <input type="checkbox" class="filled-in"  checked="checked" [(ngModel)]="checked"
-         [ngModelOptions]="{standalone: true}" (change)="sendValueFromTitleToService()"/>
+  <input type="checkbox" class="filled-in"  checked="checked" [(ngModel)]="title"
+         [ngModelOptions]="{standalone: true}" (change)="sendTermFromTitleToService()"/>
   <span>Hide Title</span>
 </label>
-  </div>
+</li>
+<li>
+  <label>
+    <input type="checkbox" class="filled-in"  checked="checked" [(ngModel)]="plot"
+           [ngModelOptions]="{standalone: true}" (change)="sendTermFromPlotToService()"/>
+    <span>Hide Plot</span>
+  </label>
+</li>
+<li>
+  <label>
+    <input type="checkbox" class="filled-in"  checked="checked" [(ngModel)]="image"
+           [ngModelOptions]="{standalone: true}" (change)="sendTermFromImageToService()"/>
+    <span>Hide Image</span>
+  </label>
 </li>

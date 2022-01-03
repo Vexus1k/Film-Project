@@ -11,6 +11,23 @@ nav
   margin-top: 20px;
   margin-bottom: 10px;
 }
+.checkboxes
+{
+  margin-right: 50px;
+
+}
+.checkboxes li
+{
+  margin: 0 50px;
+}
+.checkboxes li:first-child
+{
+  border-right: 1px dotted #6f6e6e;
+  border-left: 1px dotted #6f6e6e;
+}
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 <li>
-  <input [(ngModel)]="title" #search="ngModel" type="text" name="search" id="search" (input)="go_next()">
+  <input [(ngModel)]="title" type="text" name="search" id="search" placeholder="Search" onfocus="this.placeholder=''" onblur="this.placeholder='Search'" (input)="searchResult()">
 </li>
+
 
 

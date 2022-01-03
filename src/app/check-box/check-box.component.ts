@@ -10,12 +10,19 @@ import {Observable} from "rxjs";
   styleUrls: ['./check-box.component.css']
 })
 export class CheckBoxComponent {
-  title: string;
-  checked: boolean;
+  title: boolean;
+  plot: boolean;
+  image: boolean;
 
   constructor(private http: HttpService) { }
 
-  sendValueFromTitleToService(){
-    this.http.changeTerm(this.checked)
+  sendTermFromTitleToService(){
+    this.http.changeTermForTitle(this.title)
+  }
+  sendTermFromPlotToService(){
+    this.http.changeTermForPlot(this.plot)
+  }
+  sendTermFromImageToService(){
+    this.http.changeTermForImage(this.image)
   }
 }
